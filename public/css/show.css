@@ -1,0 +1,103 @@
+
+.produto {
+    display: flex;
+    align-items: flex-start; 
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px; 
+}
+
+.produto .info {
+    flex: 1;
+}
+
+.produto h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.produto .descricao {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.produto .preco {
+    font-size: 20px;
+    color: #333;
+}
+
+.produto .preco-parcelado {
+    font-size: 16px;
+    color: #555;
+}
+
+.produto .preco-pix {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.form-compra {
+    margin-top: 20px;
+}
+
+.btn-compras {
+    background-color: #059300;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.btn-compras:hover {
+    background-color: #555;
+}
+
+.btn-carrinho {
+    background-color: rgb(255, 111, 0);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.btn-carrinho:hover {
+    background-color: #555;
+}
+
+
+@media (max-width: 768px) {
+    .produto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto img {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0; 
+    }
+
+    .produto .info {
+        text-align: center;
+    }
+}
