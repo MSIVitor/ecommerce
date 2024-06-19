@@ -1,18 +1,18 @@
 
 ### Explicações:
-- OBS: Crie seu usuário com email "admin@admin.com" para poder utilizar o dashboard (na tela de registro de usuário, que tem como rota '/register').
-- o dashboard só poderá ser acessado se o usuário tiver esse email.
-- é possível acessar o dashboard clicando no seu nome de usuário no menu (se voce não for um usuário admin, o usuário não será clicavel)
-
-
-- é necessário também rodar o script.sql no seu banco de dados postgresql
-- mude o arquivo .env para as especificidades do seu banco de dados, no bloco que foi especificado na documentação
 
 - **Passos para a instalação do projeto**:
+  - mude o arquivo .env para as especificidades do seu banco de dados, no bloco que foi especificado na documentação
+  - é necessário também rodar o "script.sql" no seu banco de dados postgresql
   - se todas as versões das ferramentas do projeto estiverem instaladas, basta rodar os comandos:
   - *composer install*
   - *php artisan serve*
   - Acesse seu localhost na rota "localhost:8000" (substitua pela porta correta se a sua não for essa - será exibida no terminal após rodar o ultimo comando acima)
+ 
+    ### OBS:
+- Crie seu usuário com email "admin@admin.com" para poder utilizar o dashboard (na tela de registro de usuário, que tem como rota '/register').
+- o dashboard só poderá ser acessado se o usuário tiver esse email.
+- é possível acessar o dashboard clicando no seu nome de usuário no menu (se voce não for um usuário admin, o usuário não será clicavel)
 
   
 - **Descrição do Projeto**: O site foi construído usando o framework Laravel e tem como objetivo facilitar a gestão de produtos e serviços oferecidos pela loja, além de proporcionar uma experiência de compra eficiente e intuitiva para os clientes.
