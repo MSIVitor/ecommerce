@@ -6,12 +6,14 @@
 
 
 - é necessário também rodar o script.sql no seu banco de dados postgresql
+- mude o arquivo .env para as especificidades do seu banco de dados, no bloco que foi especificado na documentação
 
 - **Passos para a instalação do projeto**:
   - se todas as versões das ferramentas do projeto estiverem instaladas, basta rodar os comandos:
   - *composer install*
   - *php artisan serve*
   - Acesse seu localhost na rota "localhost:8000" (substitua pela porta correta se a sua não for essa - será exibida no terminal após rodar o ultimo comando acima)
+
   
 - **Descrição do Projeto**: O site foi construído usando o framework Laravel e tem como objetivo facilitar a gestão de produtos e serviços oferecidos pela loja, além de proporcionar uma experiência de compra eficiente e intuitiva para os clientes.
 - **Funcionalidades**: 
