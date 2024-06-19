@@ -1,5 +1,3 @@
-BEGIN;
-
 -- SEQUENCE: public.cart_id_seq
 
 -- DROP SEQUENCE IF EXISTS public.cart_id_seq;
@@ -15,7 +13,7 @@ CREATE SEQUENCE IF NOT EXISTS public.cart_id_seq
 ALTER SEQUENCE public.cart_id_seq
     OWNER TO postgres;
 
-    -- SEQUENCE: public.failed_jobs_id_seq
+-- SEQUENCE: public.failed_jobs_id_seq
 
 -- DROP SEQUENCE IF EXISTS public.failed_jobs_id_seq;
 
@@ -30,7 +28,7 @@ CREATE SEQUENCE IF NOT EXISTS public.failed_jobs_id_seq
 ALTER SEQUENCE public.failed_jobs_id_seq
     OWNER TO postgres;
 
-    -- SEQUENCE: public.migrations_id_seq
+-- SEQUENCE: public.migrations_id_seq
 
 -- DROP SEQUENCE IF EXISTS public.migrations_id_seq;
 
@@ -45,7 +43,7 @@ CREATE SEQUENCE IF NOT EXISTS public.migrations_id_seq
 ALTER SEQUENCE public.migrations_id_seq
     OWNER TO postgres;
 
-    -- SEQUENCE: public.personal_access_tokens_id_seq
+-- SEQUENCE: public.personal_access_tokens_id_seq
 
 -- DROP SEQUENCE IF EXISTS public.personal_access_tokens_id_seq;
 
@@ -60,7 +58,7 @@ CREATE SEQUENCE IF NOT EXISTS public.personal_access_tokens_id_seq
 ALTER SEQUENCE public.personal_access_tokens_id_seq
     OWNER TO postgres;
 
-    -- SEQUENCE: public.products_id_seq
+-- SEQUENCE: public.products_id_seq
 
 -- DROP SEQUENCE IF EXISTS public.products_id_seq;
 
@@ -75,7 +73,7 @@ CREATE SEQUENCE IF NOT EXISTS public.products_id_seq
 ALTER SEQUENCE public.products_id_seq
     OWNER TO postgres;
 
-    -- SEQUENCE: public.users_id_seq
+-- SEQUENCE: public.users_id_seq
 
 -- DROP SEQUENCE IF EXISTS public.users_id_seq;
 
@@ -190,21 +188,3 @@ COMMENT ON COLUMN public.products.category
 
 COMMENT ON COLUMN public.products.pix
     IS 'desconto pelo pagamento por pix';
-
-CREATE TABLE IF NOT EXISTS public.users
-(
-    id bigint NOT NULL DEFAULT nextval('users_id_seq'::regclass),
-    name character varying(255) COLLATE pg_catalog."default" NOT NULL,
-    email character varying(255) COLLATE pg_catalog."default" NOT NULL,
-    email_verified_at timestamp(0) without time zone,
-    password character varying(255) COLLATE pg_catalog."default" NOT NULL,
-    remember_token character varying(100) COLLATE pg_catalog."default",
-    created_at timestamp(0) without time zone,
-    updated_at timestamp(0) without time zone,
-    CONSTRAINT users_pkey PRIMARY KEY (id),
-    CONSTRAINT users_email_unique UNIQUE (email)
-)
-WITH (
-    OIDS = FALSE
-);
-END;
