@@ -4,6 +4,9 @@
 - o dashboard só poderá ser acessado se o usuário tiver esse email.
 - é possível acessar o dashboard clicando no seu nome de usuário no menu (se voce não for um usuário admin, o usuário não será clicavel)
 
+
+- é necessário também rodar o script.sql no seu banco de dados
+  
 - **Descrição do Projeto**: O site foi construído usando o framework Laravel e tem como objetivo facilitar a gestão de produtos e serviços oferecidos pela loja, além de proporcionar uma experiência de compra eficiente e intuitiva para os clientes.
 - **Funcionalidades**: 
 - Cadastro de Produtos: Permite adicionar, editar, remover e visualizar produtos.
