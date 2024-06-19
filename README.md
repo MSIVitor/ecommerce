@@ -10,7 +10,7 @@
   - Acesse seu localhost na rota "localhost:8000" (substitua pela porta correta se a sua não for essa - será exibida no terminal após rodar o ultimo comando acima)
  
     ### OBS:
-- Crie seu usuário com email "admin@admin.com" para poder utilizar o dashboard (na tela de registro de usuário, que tem como rota '/register').
+- Crie seu usuário com email "admin@admin.com" no menu 'Registro' para poder utilizar o dashboard, ou pela rota '/register'.
 - o dashboard só poderá ser acessado se o usuário tiver esse email.
 - é possível acessar o dashboard clicando no seu nome de usuário no menu (se voce não for um usuário admin, o usuário não será clicavel) ou pela rota '/dashboard'.
 
