@@ -1,5 +1,95 @@
 BEGIN;
 
+-- SEQUENCE: public.cart_id_seq
+
+-- DROP SEQUENCE IF EXISTS public.cart_id_seq;
+
+CREATE SEQUENCE IF NOT EXISTS public.cart_id_seq
+    INCREMENT 1
+    START 1
+    MINVALUE 1
+    MAXVALUE 9223372036854775807
+    CACHE 1
+    OWNED BY cart.id;
+
+ALTER SEQUENCE public.cart_id_seq
+    OWNER TO postgres;
+
+    -- SEQUENCE: public.failed_jobs_id_seq
+
+-- DROP SEQUENCE IF EXISTS public.failed_jobs_id_seq;
+
+CREATE SEQUENCE IF NOT EXISTS public.failed_jobs_id_seq
+    INCREMENT 1
+    START 1
+    MINVALUE 1
+    MAXVALUE 9223372036854775807
+    CACHE 1
+    OWNED BY failed_jobs.id;
+
+ALTER SEQUENCE public.failed_jobs_id_seq
+    OWNER TO postgres;
+
+    -- SEQUENCE: public.migrations_id_seq
+
+-- DROP SEQUENCE IF EXISTS public.migrations_id_seq;
+
+CREATE SEQUENCE IF NOT EXISTS public.migrations_id_seq
+    INCREMENT 1
+    START 1
+    MINVALUE 1
+    MAXVALUE 2147483647
+    CACHE 1
+    OWNED BY migrations.id;
+
+ALTER SEQUENCE public.migrations_id_seq
+    OWNER TO postgres;
+
+    -- SEQUENCE: public.personal_access_tokens_id_seq
+
+-- DROP SEQUENCE IF EXISTS public.personal_access_tokens_id_seq;
+
+CREATE SEQUENCE IF NOT EXISTS public.personal_access_tokens_id_seq
+    INCREMENT 1
+    START 1
+    MINVALUE 1
+    MAXVALUE 9223372036854775807
+    CACHE 1
+    OWNED BY personal_access_tokens.id;
+
+ALTER SEQUENCE public.personal_access_tokens_id_seq
+    OWNER TO postgres;
+
+    -- SEQUENCE: public.products_id_seq
+
+-- DROP SEQUENCE IF EXISTS public.products_id_seq;
+
+CREATE SEQUENCE IF NOT EXISTS public.products_id_seq
+    INCREMENT 1
+    START 1
+    MINVALUE 1
+    MAXVALUE 9223372036854775807
+    CACHE 1
+    OWNED BY products.id;
+
+ALTER SEQUENCE public.products_id_seq
+    OWNER TO postgres;
+
+    -- SEQUENCE: public.users_id_seq
+
+-- DROP SEQUENCE IF EXISTS public.users_id_seq;
+
+CREATE SEQUENCE IF NOT EXISTS public.users_id_seq
+    INCREMENT 1
+    START 1
+    MINVALUE 1
+    MAXVALUE 9223372036854775807
+    CACHE 1
+    OWNED BY users.id;
+
+ALTER SEQUENCE public.users_id_seq
+    OWNER TO postgres;
+
 
 CREATE TABLE IF NOT EXISTS public.cart
 (
