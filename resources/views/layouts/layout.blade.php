@@ -28,17 +28,21 @@
         @endguest
 
         @auth
-            <span>{{ Auth::user()->name }}</span>&nbsp &nbsp &nbsp &nbsp     |&nbsp
-            <a href="{{ route('logout') }}"
-               onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-            </a>
+    @if(Auth::user()->email === 'admin@admin.com')
+        <a href="{{ route('dashboard') }}">{{ Auth::user()->name }}</a>&nbsp &nbsp &nbsp &nbsp     |&nbsp
+    @else
+        <span>{{ Auth::user()->name }}</span>&nbsp &nbsp &nbsp &nbsp     |&nbsp
+    @endif
+    <a href="{{ route('logout') }}"
+       onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+        {{ __('Logout') }}
+    </a>
 
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
-        @endauth
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+    </form>
+@endauth
     </div>
 </header>
 
