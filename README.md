@@ -6,7 +6,6 @@
 - Cadastro de Produtos: Permite adicionar, editar, remover e visualizar produtos.
 - Carrinho de Compras: Funcionalidades de adicionar ao carrinho, atualizar quantidades e remover itens.
 -	Processo de Checkout: Fluxo simplificado de checkout com integração de pagamento segura.
--	Painel Administrativo: Dashboard para gerenciar produtos, pedidos e usuários.
 
 - **Pré-requisitos**:
 - 	PHP: Versão 8.0.2 ou superior.
