@@ -19,7 +19,7 @@ class CheckoutController extends Controller
 
         try {
             $charge = Charge::create([
-                'amount' => 1000, // Valor em centavos
+                'amount' => 1000, 
                 'currency' => 'usd',
                 'description' => 'Pagamento de Exemplo',
                 'source' => $request->stripeToken,

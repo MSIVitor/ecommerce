@@ -188,3 +188,18 @@ COMMENT ON COLUMN public.products.category
 
 COMMENT ON COLUMN public.products.pix
     IS 'desconto pelo pagamento por pix';
+
+
+    INSERT INTO public.products (name, description, price, image, pix)
+VALUES ('100% Whey Protein Gold Standard (2270g) - Optimum Nutrition', 
+        'O 100% Whey Protein Gold Standard 2270g da Optimum Nutrition é um suplemento proteico composto pela mistura do whey protein concentrado, isolado e hidrolisado. Sua composição oferece uma absorção rápida e gradual pela musculatura.',
+        80.00,
+        'https://images.tcdn.com.br/img/img_prod/1131941/whey_protein_isolado_baunilha_450g_dux_nutrition_661_1_33ac947318374ae7b22ac91d1bd68fe4.jpg',
+        20);
+
+INSERT INTO public.products (name, description, price, image, pix)
+VALUES ('Horus 150g - Max Titanium Frutas Vermelhas',
+        'O Horús foi o primeiro pré-treino brasileiro, lançado após a liberação da ANVISA para o uso de Beta Alanina pela indústria de suplementos. Ele contém ingredientes que irão potencializar o seu treino e melhorar sua performance! Para quem se exercita com intensidade, a fadiga é um dos principais fatores que influenciam o rendimento, por isso desenvolvemos o HÓRUS: com formulação altamente tecnológica e ingredientes de altíssima qualidade, para você ter um treino com muito mais eficiência.',
+        82.84,
+        'https://lojamaxtitanium.vtexassets.com/arquivos/ids/157427-1200-1200?v=638344607351200000&width=1200&height=1200&aspect=true',
+        10);

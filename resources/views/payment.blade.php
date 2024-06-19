@@ -5,9 +5,18 @@
 @section('content')
     <section id="payment-form" class="container">
         <h2>Formulário de Pagamento</h2>
-        <head>
-        <link rel="stylesheet" href="/css/checkout.css">
-        </head>
+
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        @if (session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
 
         <form id="checkout-form" method="POST" action="{{ route('payment.process') }}">
             @csrf
@@ -75,33 +84,31 @@
             var country = document.getElementById('country').value;
             var postalCode = document.getElementById('postal-code').value;
 
+            
             stripe.createToken(cardElement, {
-                name: cardholderName,
-                address_country: country,
-                address_zip: postalCode,
-            }).then(function(result) {
-                if (result.error) {
-                    var errorElement = document.getElementById('card-errors');
-                    errorElement.textContent = result.error.message;
-                } else {
-                    stripeTokenHandler(result.token);
-                }
-            });
+            name: cardholderName,
+            address_country: country,
+            address_zip: postalCode,
+        }).then(function(result) {
+            if (result.error) {
+                var errorElement = document.getElementById('card-errors');
+                errorElement.textContent = result.error.message;
+            } else {
+                stripeTokenHandler(result.token);
+            }
         });
+    });
 
-        function stripeTokenHandler(token) {
-            // Aqui você pode enviar o token para o servidor para completar a transação
-            console.log(token);
+    function stripeTokenHandler(token) {
+        var form = document.getElementById('checkout-form');
+        var hiddenInput = document.createElement('input');
+        hiddenInput.setAttribute('type', 'hidden');
+        hiddenInput.setAttribute('name', 'stripeToken');
+        hiddenInput.setAttribute('value', token.id);
+        form.appendChild(hiddenInput);
 
-            var form = document.getElementById('checkout-form');
-            var hiddenInput = document.createElement('input');
-            hiddenInput.setAttribute('type', 'hidden');
-            hiddenInput.setAttribute('name', 'stripeToken');
-            hiddenInput.setAttribute('value', token.id);
-            form.appendChild(hiddenInput);
+        form.submit();
+    }
+</script>
 
-            // Submete o formulário
-            form.submit();
-        }
-    </script>
-@endpush
+<link rel="stylesheet" href="/css/checkout.css">
