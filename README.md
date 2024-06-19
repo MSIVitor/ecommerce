@@ -1,11 +1,13 @@
 
 ### Explicações:
+- OBS: Crie seu usuário com email "admin@admin.com" para poder utilizar o dashboard.
 
 - **Descrição do Projeto**: O site foi construído usando o framework Laravel e tem como objetivo facilitar a gestão de produtos e serviços oferecidos pela loja, além de proporcionar uma experiência de compra eficiente e intuitiva para os clientes.
 - **Funcionalidades**: 
 - Cadastro de Produtos: Permite adicionar, editar, remover e visualizar produtos.
 - Carrinho de Compras: Funcionalidades de adicionar ao carrinho, atualizar quantidades e remover itens.
 -	Processo de Checkout: Fluxo simplificado de checkout com integração de pagamento segura.
+-	Dashboard par aadicionar e remover produtos
 
 - **Pré-requisitos**:
 - 	PHP: Versão 8.0.2 ou superior.
