@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS public.products
     name character varying(255) COLLATE pg_catalog."default" NOT NULL,
     description text COLLATE pg_catalog."default" NOT NULL,
     price numeric(8, 2) NOT NULL,
-    stock integer NOT NULL,
+    stock integer,
     created_at timestamp(0) without time zone,
     updated_at timestamp(0) without time zone,
     category integer,
