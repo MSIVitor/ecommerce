@@ -1,6 +1,6 @@
 
 ### Explicações:
-- OBS: Crie seu usuário com email "admin@admin.com" para poder utilizar o dashboard.
+- OBS: Crie seu usuário com email "admin@admin.com" para poder utilizar o dashboard na rota localhost:8000/register.
 - o dashboard só poderá ser acessado se o usuário tiver esse email.
 - é possível acessar o dashboard clicando no seu nome de usuário no menu (se voce não for um usuário admin, o usuário não será clicavel)
 
